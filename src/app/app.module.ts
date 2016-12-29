@@ -14,6 +14,12 @@ import { DomainPipe } from './domain.pipe';
 
 // Providers
 import { HackerNewsAPIService } from './hackernews-api.service';
+import { ItemCommentsComponent } from './item-comments/item-comments.component';
+
+// Routing
+import { routing } from './app.routes';
+import { CommentTreeComponent } from './comment-tree/comment-tree.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +28,16 @@ import { HackerNewsAPIService } from './hackernews-api.service';
     StoriesComponent,
     FooterComponent,
     ItemComponent,
-    DomainPipe
+    DomainPipe,
+    ItemCommentsComponent,
+    CommentTreeComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [HackerNewsAPIService],
   bootstrap: [AppComponent]
