@@ -20,4 +20,9 @@ export class HackerNewsAPIService {
     return this.http.get(`${this.baseUrl}/item/${id}`)
                     .map(response => response.json());
   }
+
+  fetchUser(name: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/user/${name}`)
+                    .map(response => response.json());
+  }
 }
